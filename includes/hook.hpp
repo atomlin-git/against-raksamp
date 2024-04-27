@@ -3,7 +3,7 @@
 class Hook
 {
     public:
-        static void* SET_CALL_HOOK(uintptr_t HookAddress, void* DetourFunction)
+        static void* call(uintptr_t HookAddress, void* DetourFunction)
         {
             uintptr_t OriginalFunction = *reinterpret_cast<uintptr_t*>(HookAddress + 1) + HookAddress + 5;
             DWORD oldProt;
