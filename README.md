@@ -1,4 +1,5 @@
-###### Плагин, который не даст зайти раксампу <br><br>
-###### Работает за счёт выхода за пределы массива: https://github.com/YashasSamaga/RakSAMP/blob/master/client/src/netgame.cpp#L64
-###### Разработчик не учёл, что может прилететь значение ID большее, чем 1004
-###### Обычный SA:MP клиент при обработке ID_CONNECTION_REQUEST_ACCEPTED не производит манипуляций с ником. За счёт этого - мы можем просто отправить 65535, и раксамп крашнется
+###### A plugin that will not allow a raksamp to enter
+
+###### It works by going outside the array: https://github.com/YashasSamaga/RakSAMP/blob/master/client/src/netgame.cpp#L64
+###### The developer did not take into account that an ID value greater than 1004 may arrive
+###### The usual SA:MP client does not manipulate the nickname when processing ID_CONNECTION_REQUEST_ACCEPTED. Due to this, we can just send 65535, and the raksamp will crash
